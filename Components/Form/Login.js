@@ -7,7 +7,7 @@ const preventDefault = f => e => {
     f(e)
   }
 
-export default function Login({action = '/teste'}){
+export default function Login({action = '/dashboard'}){
     //Controle de rota
     const router = useRouter()
     //busca o query para entrar ao clicar no botão
@@ -26,7 +26,7 @@ export default function Login({action = '/teste'}){
 
     return (
         <Form className="text-center" style={{ width: "25rem" }} onSubmit={handleSubmit}>
-            <Image src="/vercel.svg" style={{margin: "1rem"}}></Image>
+            <Image src="/logo.png" style={{margin: "1rem"}}></Image>
             <Form.Group controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="E-mail" />
             </Form.Group>
