@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-import { Navbar, Nav, Button, NavDropdown, Form } from 'react-bootstrap'
+import { Navbar, Nav, Button, NavDropdown, Form, Image } from 'react-bootstrap'
 
 const preventDefault = f => e => {
     e.preventDefault()
@@ -22,32 +22,43 @@ export default function NavBar({ action = '/teste'}){
 
     return (
         <>
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar expand="lg">
+                <Navbar.Brand href="#home">
+                    <Image src="/logo.png" style={{width: "50%"}}></Image>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav style={{margin: "auto!important"}}>
+                        <Nav.Link className="navbar-link" href="/dashboard">Início</Nav.Link>
+                        <Nav.Link className="navbar-link" href="/aulas-ao-vivo">Aulas Ao Vivo</Nav.Link>
+                        <NavDropdown className="navbar-link" title="Materias" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/matematica">Matemática</NavDropdown.Item>
+                            <NavDropdown.Item href="/ciencias-humanas">Ciências Humanas</NavDropdown.Item>
+                            <NavDropdown.Item href="/ciencias-da-natureza">Ciências da Natureza</NavDropdown.Item>
+                            <NavDropdown.Item href="/linguagens">Linguagens</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/ingles">Inglês</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown className="navbar-link" title="Perfil" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/perfil/[id].js">Perfil</NavDropdown.Item>
+                            <NavDropdown.Item href="/materias-salvas/[id].js">Matérias Salvas</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Minhas Anotações</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Sair</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
-                    <Form inline onSubmit={handleSubmit}>
-                        <Form.Control type='text'
-                        name='q'
-                        value={query}
-                        onChange={handleParam(setQuery)}
-                        aria-label='Search' 
-                        placeholder="Search" 
-                        className="mr-sm-2" />
+                    {/* <Form inline onSubmit={handleSubmit}>
+                        <Form.Control 
+                            type='text'
+                            name='q'
+                            value={query}
+                            onChange={handleParam(setQuery)}
+                            aria-label='Search' 
+                            placeholder="Search" 
+                            className="mr-0" />
 
-                        <Button variant="outline-success" type="submit">Search</Button>
-                    </Form>
+                        <Button className="button-search" type="submit">Search</Button>
+                    </Form> */}
                 </Navbar.Collapse>
             </Navbar>
         </>

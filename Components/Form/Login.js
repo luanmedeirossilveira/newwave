@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Image } from 'react-bootstrap'
 
 const preventDefault = f => e => {
     e.preventDefault()
@@ -26,6 +26,7 @@ export default function Login({action = '/teste'}){
 
     return (
         <Form className="text-center" style={{ width: "25rem" }} onSubmit={handleSubmit}>
+            <Image src="/vercel.svg" style={{margin: "1rem"}}></Image>
             <Form.Group controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="E-mail" />
             </Form.Group>
