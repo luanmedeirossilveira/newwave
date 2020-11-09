@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #9FBBCC;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.navbar-link{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.button-search{
+    background-color: #BCD4DE;
+    border: 1px solid #A5CCD1;
+}
+
+.button-search:hover{
+    background-color: #A5CCD1;
+    border: 1px solid #A5CCD1;
+}
