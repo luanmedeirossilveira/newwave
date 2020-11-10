@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Nav, Button, Dropdown, DropdownButton, ButtonGroup } from 'react-bootstrap'
-import styles from '../styles/Home.module.css'
 
 export default function Teste(){
     const [show, setShow] = useState(false)
     const logado = true
+    const index = false
     return (
         <>
             { logado &&

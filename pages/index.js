@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Login from '../Components/Form/Login'
-import styles from '../styles/Home.module.css'
 import { Nav } from 'react-bootstrap'
 
 export default function Home() {
+  const index = true
   return (
     <div>
       <Head>
@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main, styles.container}>
+      <main className="main">
         <Login></Login>
       </main>
     </div>
