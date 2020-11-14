@@ -26,7 +26,7 @@ export default function Login({action = '/dashboard'}){
 
     return (
         <Form className="text-center" style={{ width: "25rem" }} onSubmit={handleSubmit}>
-            <Image src="/logo.png" style={{margin: "1rem"}}></Image>
+            <Image src="https://media.giphy.com/media/YFFGUPTPTRqIhwepA4/giphy.gif" style={{width: "50%", margin: "1rem"}}></Image>
             <Form.Group controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="E-mail" />
             </Form.Group>

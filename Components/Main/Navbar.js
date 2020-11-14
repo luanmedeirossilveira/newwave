@@ -7,7 +7,7 @@ const preventDefault = f => e => {
     f(e)
   }
 
-export default function NavBar({ action = '/teste'}){
+export default function NavBar({ action = '/teste'}, index){
     const router = useRouter()
     const [query, setQuery] = useState('')
 
@@ -22,6 +22,7 @@ export default function NavBar({ action = '/teste'}){
 
     return (
         <>
+            {!index &&
             <Navbar expand="lg">
                 <Navbar.Brand href="#home">
                     <Image src="/logo.png" style={{width: "50%"}}></Image>
@@ -62,6 +63,14 @@ export default function NavBar({ action = '/teste'}){
                     </Form> */}
                 </Navbar.Collapse>
             </Navbar>
+            }{index &&
+                <Navbar expand="lg">
+                    <Navbar.Brand href="#home">
+                        <Image src="/logo.png" style={{width: "50%"}}></Image>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                </Navbar>
+            }
         </>
     )
 }
