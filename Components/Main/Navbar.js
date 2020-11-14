@@ -39,6 +39,7 @@ export default function NavBar({ action = '/teste'}){
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/ingles">Inglês</NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link className="navbar-link" href="/para-criancas">Para Crianças</Nav.Link>
                         <NavDropdown className="navbar-link" title="Perfil" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/perfil/[id].js">Perfil</NavDropdown.Item>
                             <NavDropdown.Item href="/materias-salvas/[id].js">Matérias Salvas</NavDropdown.Item>
