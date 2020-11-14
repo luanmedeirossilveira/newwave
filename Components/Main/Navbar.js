@@ -22,7 +22,6 @@ export default function NavBar({ action = '/teste'}, index){
 
     return (
         <>
-            {!index &&
             <Navbar expand="lg">
                 <Navbar.Brand href="#home">
                     <Image src="/logo.png" style={{width: "50%"}}></Image>
@@ -63,14 +62,6 @@ export default function NavBar({ action = '/teste'}, index){
                     </Form> */}
                 </Navbar.Collapse>
             </Navbar>
-            }{index &&
-                <Navbar expand="lg">
-                    <Navbar.Brand href="#home">
-                        <Image src="/logo.png" style={{width: "50%"}}></Image>
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                </Navbar>
-            }
-        </>
+    </>
     )
 }
